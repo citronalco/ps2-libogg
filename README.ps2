@@ -1,0 +1,3 @@
+make -f Makefile.ps2
+
+Should build with current ps2sdk (as of 2018/08) 
