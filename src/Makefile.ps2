@@ -1,6 +1,6 @@
 CC	= ee-gcc
 
-CFLAGS = -I ../include -I . -g -D_EE -fsigned-char -D_REENTRANT
+CFLAGS = -I ../include -I . -g -D_EE -fsigned-char -D_REENTRANT -pg -g -O20 -ffast-math
 
 EE_TARGET = libogg.a
 
