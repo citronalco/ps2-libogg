@@ -1,0 +1,11 @@
+all: 
+	$(MAKE) -C src -f Makefile.ps2
+
+clean:
+	$(MAKE) -C src -f Makefile.ps2
+
+install:
+	mkdir -p $(DESTDIR)$(PS2SDK)/ports/include/ogg/
+	mkdir -p $(DESTDIR)$(PS2SDK)/ports/lib/
+	cp -f include/ogg/*h $(DESTDIR)$(PS2SDK)/ports/include/ogg/
+	cp -f src/libogg.a $(DESTDIR)$(PS2SDK)/ports/lib/

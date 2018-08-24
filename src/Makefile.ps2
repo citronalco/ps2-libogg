@@ -1,0 +1,19 @@
+CC	= ee-gcc
+
+CFLAGS = -I ../include -I . -g -D_EE -fsigned-char -D_REENTRANT
+
+EE_TARGET = libogg.a
+
+EE_OBJS = bitwise.o framing.o
+
+all: $(EE_TARGET)
+
+clean:
+	rm -f $(EE_TARGET) $(EE_OBJS)
+
+$(EE_TARGET): $(EE_OBJS)
+	ar rv $(EE_TARGET) $(EE_OBJS)
+	ranlib $(EE_TARGET)
+
+%.o: %.c
+	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
