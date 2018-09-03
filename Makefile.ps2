@@ -2,7 +2,7 @@ all:
 	$(MAKE) -C src -f Makefile.ps2
 
 clean:
-	$(MAKE) -C src -f Makefile.ps2
+	$(MAKE) -C src -f Makefile.ps2 clean
 
 install:
 	mkdir -p $(DESTDIR)$(PS2SDK)/ports/include/ogg/
